@@ -1,0 +1,24 @@
+
+{% extends "base.html" %}
+
+
+
+{% block content%} 
+    <h1>This is Home page</h1>
+
+
+    <h3>Personal Infos</h3>
+    {% for people in peoples%}
+    <h5>SI.No: {{forloop.counter}}</h5>
+    <h5>First Name: {{people.first_name}}</h5>
+    <h5>Last Name: {{people.last_name}} </h5>
+    <h5>Age: {{people.age}}</h5>
+    <h5>Interest: {{people.Interest}}</h5>
+    <h5>Goals: {{people.Goals}}</h5>
+    {% endfor %}
+
+    <a href="/about/">About</a>|
+    <a href="/contact/">Contact</a>
+
+    {%endblock%}
+
